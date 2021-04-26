@@ -1,0 +1,3 @@
+C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/CMakeFiles/recipes.dir
+C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
