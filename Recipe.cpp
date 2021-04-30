@@ -37,3 +37,19 @@ void Recipe::PrintRecipe() {
         std::cout << steps.at(i) << std::endl;
     }
 }
+
+void Recipe::save(std::ostream &out) {
+    int i;
+    out << "Name: " << nameOfRecipe << std::endl;
+    out << "Description: " << description << std::endl << std::endl;
+    out << "Ingredients:" << std::endl;
+    for (i = 0; i < ingredients.size(); i++ ) {
+        out << ingredients.at(i) << std::endl;
+    }
+    out << std::endl;
+    out << "Steps:" << std::endl;
+    for (i = 0; i < steps.size(); i++) {
+        out << steps.at(i) << std::endl;
+    }
+    out << "********************" << std::endl;
+}

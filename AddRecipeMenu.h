@@ -36,15 +36,18 @@ void UserOptionAdd(RecipeList *list, char option) { //function to call appropria
 
             case '2':
                 validOption = true;
+                NewLunchRecipe(list);
                 // std::cout << "This is option 2" << std::endl;//FIXME testing option only
                 break;
 
             case '3':
+                NewDinnerRecipe(list);
                 validOption = true;
                 //  std::cout << "This is option 3" << std::endl;//FIXME testing option only
                 break;
 
             case '4':
+                NewDessertRecipe(list);
                 validOption = true;
                 // std::cout << "This is option 4" << std::endl;//FIXME testing option only
                 break;

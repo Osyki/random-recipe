@@ -6,6 +6,7 @@
 #define RECIPES_MAINMENU_H
 #include "DisplayRecipeMenu.h"
 #include "AddRecipeMenu.h"
+#include "SaveLoadMenu.h"
 
 
 void UserOptionMain(RecipeList *list, char option);
@@ -52,7 +53,7 @@ void UserOptionMain(RecipeList *list, char option) { //function to call appropri
                 MainMenu(list);
                 break;
 
-            case '4':
+            case '4': //load to file FIXME do next
                 validOption = true;
                 //std::cout << "This is option 4" << std::endl;//testing option only
                 MainMenu(list);
@@ -60,6 +61,7 @@ void UserOptionMain(RecipeList *list, char option) { //function to call appropri
 
             case '5':
                 validOption = true;
+                SaveToFile(list);
                 //std::cout << "This is option 5" << std::endl;//testing option only
                 MainMenu(list);
                 break;

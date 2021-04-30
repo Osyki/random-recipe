@@ -54,4 +54,15 @@ void NewBreakfastRecipe(RecipeList *list) {
     NewRecipe(list, Recipe::recipeType::breakfast);
 }
 
+void NewLunchRecipe(RecipeList *list) {
+    NewRecipe(list,Recipe::recipeType::lunch);
+}
+
+void NewDinnerRecipe(RecipeList *list) {
+    NewRecipe(list,Recipe::recipeType::dinner);
+}
+void NewDessertRecipe(RecipeList *list) {
+    NewRecipe(list,Recipe::recipeType::dessert);
+}
+
 #endif //RECIPES_NEWRECIPES_H

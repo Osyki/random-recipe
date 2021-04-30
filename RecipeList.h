@@ -13,13 +13,17 @@ public:
     RecipeList();
     void PrintRecipes(char option);
     void AddRecipe(Recipe &recipes);
+    void SaveFile(std::ostream &out);
 
 private:
-    std::vector<Recipe> recipeList;
-    std::vector<Recipe> breakfastList;
-    std::vector<Recipe> lunchList;
-    std::vector<Recipe> dinnerList;
-    std::vector<Recipe> dessertList;
+    std::vector<std::vector<Recipe>> recipeList2D;
+    /**
+     * recipeList2D is set up this way:
+     * 0 - Breakfast
+     * 1 - Lunch
+     * 2 - Dinner
+     * 3 - Dessert
+     */
 };
 
 

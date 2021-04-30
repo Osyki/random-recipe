@@ -14,6 +14,7 @@ public:
     Recipe();
     Recipe(recipeType type, std::string name, std::string desc, std::vector<std::string> ingredients, std::vector<std::string> steps);
     void PrintRecipe();
+    void save(std::ostream &out);
     recipeType GetType() {return type;};
 private:
     recipeType type;
