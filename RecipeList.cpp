@@ -72,14 +72,13 @@ void RecipeList::AddRecipe(Recipe &recipes) {
 
 RecipeList::RecipeList() {
     recipeList2D.resize(4); //currently set to 4 for breakfast, lunch, dinner, dessert
+    breakfastHeader = "---Breakfast Recipes---";
+    lunchHeader = "---Lunch Recipes---";
+    dinnerHeader = "---Dinner Recipes---";
+    dessertHeader = "---Dessert Recipes---";
 }
 
 void RecipeList::SaveFile(std::ostream &out) {
-    std::string breakfastHeader = "---Breakfast Recipes---";
-    std::string lunchHeader = "---Lunch Recipes---";
-    std::string dinnerHeader = "---Dinner Recipes---";
-    std::string dessertHeader = "---Dessert Recipes---";
-
     for (int i = 0; i < recipeList2D.size(); i++) {
         switch (i) {
             case 0:

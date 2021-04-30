@@ -14,7 +14,10 @@ public:
     void PrintRecipes(char option);
     void AddRecipe(Recipe &recipes);
     void SaveFile(std::ostream &out);
-
+    std::string GetBreakfastHeader() {return breakfastHeader;};
+    std::string GetLunchHeader() {return lunchHeader;};
+    std::string GetDinnerHeader() {return dinnerHeader;};
+    std::string GetDessertHeader() {return dessertHeader;};
 private:
     std::vector<std::vector<Recipe>> recipeList2D;
     /**
@@ -24,6 +27,7 @@ private:
      * 2 - Dinner
      * 3 - Dessert
      */
+     std::string breakfastHeader, lunchHeader, dinnerHeader, dessertHeader; //headers for loading/saving
 };
 
 

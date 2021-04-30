@@ -55,6 +55,7 @@ void UserOptionMain(RecipeList *list, char option) { //function to call appropri
 
             case '4': //load to file FIXME do next
                 validOption = true;
+                LoadFromFile(list);
                 //std::cout << "This is option 4" << std::endl;//testing option only
                 MainMenu(list);
                 break;
