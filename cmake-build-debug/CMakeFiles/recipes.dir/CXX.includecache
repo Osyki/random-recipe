@@ -6,55 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Ekyso/CLionProjects/recipes/AddRecipeMenu.h
-NewRecipes.h
-C:/Users/Ekyso/CLionProjects/recipes/NewRecipes.h
-
-C:/Users/Ekyso/CLionProjects/recipes/DisplayRecipeMenu.h
-RecipeList.h
-C:/Users/Ekyso/CLionProjects/recipes/RecipeList.h
-
-C:/Users/Ekyso/CLionProjects/recipes/MainMenu.h
-DisplayRecipeMenu.h
-C:/Users/Ekyso/CLionProjects/recipes/DisplayRecipeMenu.h
-AddRecipeMenu.h
-C:/Users/Ekyso/CLionProjects/recipes/AddRecipeMenu.h
-SaveLoadMenu.h
-C:/Users/Ekyso/CLionProjects/recipes/SaveLoadMenu.h
-
-C:/Users/Ekyso/CLionProjects/recipes/NewRecipes.h
-vector
--
-Recipe.h
-C:/Users/Ekyso/CLionProjects/recipes/Recipe.h
-RecipeList.h
-C:/Users/Ekyso/CLionProjects/recipes/RecipeList.h
-
 C:/Users/Ekyso/CLionProjects/recipes/Recipe.h
 string
 -
 vector
 -
 
-C:/Users/Ekyso/CLionProjects/recipes/RecipeList.h
-string
--
-vector
--
-Recipe.h
-C:/Users/Ekyso/CLionProjects/recipes/Recipe.h
-
-C:/Users/Ekyso/CLionProjects/recipes/SaveLoadMenu.h
+C:/Users/Ekyso/CLionProjects/recipes/RecipeList.cpp
 iostream
 -
+RecipeList.h
+C:/Users/Ekyso/CLionProjects/recipes/RecipeList.h
 fstream
 -
 
-C:/Users/Ekyso/CLionProjects/recipes/main.cpp
-iostream
+C:/Users/Ekyso/CLionProjects/recipes/RecipeList.h
+string
 -
-MainMenu.h
-C:/Users/Ekyso/CLionProjects/recipes/MainMenu.h
 vector
 -
+Recipe.h
+C:/Users/Ekyso/CLionProjects/recipes/Recipe.h
 

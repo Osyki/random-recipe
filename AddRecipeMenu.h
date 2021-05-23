@@ -31,25 +31,25 @@ void UserOptionAdd(RecipeList *list, char option) { //function to call appropria
             case '1':
                 validOption = true; //to exit loop after functions are called if switch case matches
                 NewBreakfastRecipe(list);
-                //std::cout << "This is option 1" << std::endl;//FIXME testing option only
+                //std::cout << "This is option 1" << std::endl;//TODO testing option only
                 break;
 
             case '2':
                 validOption = true;
                 NewLunchRecipe(list);
-                // std::cout << "This is option 2" << std::endl;//FIXME testing option only
+                // std::cout << "This is option 2" << std::endl;//TODO testing option only
                 break;
 
             case '3':
                 NewDinnerRecipe(list);
                 validOption = true;
-                //  std::cout << "This is option 3" << std::endl;//FIXME testing option only
+                //  std::cout << "This is option 3" << std::endl;//TODO testing option only
                 break;
 
             case '4':
                 NewDessertRecipe(list);
                 validOption = true;
-                // std::cout << "This is option 4" << std::endl;//FIXME testing option only
+                // std::cout << "This is option 4" << std::endl;//TODO testing option only
                 break;
 
             case 'q': //quits the program

@@ -35,7 +35,7 @@ void UserOptionMain(RecipeList *list, char option) { //function to call appropri
         switch (option) { //switch case for easy option integration
             case '1':
                 validOption = true; //to exit loop after functions are called if switch case matches
-                //std::cout << "This is option 1" << std::endl; // testing option only
+                //std::cout << "This is option 1" << std::endl; //TODO: testing option only
                 AddRecipeMenu(list); //call addrecipemenu and pass list
                 MainMenu(list); //call main menu again
                 break; //break out of switch
@@ -43,27 +43,28 @@ void UserOptionMain(RecipeList *list, char option) { //function to call appropri
             case '2':
                 validOption = true;
                 DisplayRecipeMenu(list);
-                //std::cout << "This is option 2" << std::endl;//Ftesting option only
+                //std::cout << "This is option 2" << std::endl; //TODO: testing option only
                 MainMenu(list);
                 break;
 
             case '3':
                 validOption = true;
-                //std::cout << "This is option 3" << std::endl;//testing option only
+                //std::cout << "This is option 3" << std::endl; //TODO: testing option only
                 MainMenu(list);
                 break;
 
             case '4': //load to file FIXME do next
                 validOption = true;
-                LoadFromFile(list);
-                //std::cout << "This is option 4" << std::endl;//testing option only
+                LoadFromFile(list); //FIXME: change to call load method
+                //std::cout << "This is option 4" << std::endl; //TODO: testing option only
                 MainMenu(list);
                 break;
 
             case '5':
                 validOption = true;
-                SaveToFile(list);
-                //std::cout << "This is option 5" << std::endl;//testing option only
+                //SaveToFile(list);
+                list->SaveFile(); //call save method to save to file
+                //std::cout << "This is option 5" << std::endl; //TODO: testing option only
                 MainMenu(list);
                 break;
 

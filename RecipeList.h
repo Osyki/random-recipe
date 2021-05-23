@@ -13,7 +13,7 @@ public:
     RecipeList();
     void PrintRecipes(char option);
     void AddRecipe(Recipe &recipes);
-    void SaveFile(std::ostream &out);
+    void SaveFile();
     std::string GetBreakfastHeader() {return breakfastHeader;};
     std::string GetLunchHeader() {return lunchHeader;};
     std::string GetDinnerHeader() {return dinnerHeader;};
@@ -28,6 +28,7 @@ private:
      * 3 - Dessert
      */
      std::string breakfastHeader, lunchHeader, dinnerHeader, dessertHeader; //headers for loading/saving
+     std::string separator;
 };
 
 

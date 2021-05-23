@@ -22,7 +22,6 @@ private:
     std::string description;
     std::vector<std::string> ingredients;
     std::vector<std::string> steps;
-
 };
 
 

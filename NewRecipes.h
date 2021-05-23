@@ -50,6 +50,7 @@ void NewRecipe(RecipeList *list, Recipe::recipeType type) {
 
 }
 
+
 void NewBreakfastRecipe(RecipeList *list) {
     NewRecipe(list, Recipe::recipeType::breakfast);
 }
