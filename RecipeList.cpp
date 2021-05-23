@@ -130,7 +130,7 @@ void RecipeList::LoadFile() {
     bool validOption = false;
     std::cout << "Load from file? (Y/n)" << std::endl;
 
-    while (!validOption) {
+    while (!validOption) { //testing if gitignore is working for cmakefiles
         std::cin >> userOption;
         userOption = char(std::tolower(userOption)); //convert to lowercase
         if (userOption == 'y') {
