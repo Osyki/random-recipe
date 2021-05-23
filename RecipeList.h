@@ -11,9 +11,11 @@
 class RecipeList {
 public:
     RecipeList();
+    ~RecipeList();
     void PrintRecipes(char option);
     void AddRecipe(Recipe &recipes);
     void SaveFile();
+    void LoadFile();
     std::string GetBreakfastHeader() {return breakfastHeader;};
     std::string GetLunchHeader() {return lunchHeader;};
     std::string GetDinnerHeader() {return dinnerHeader;};

@@ -78,9 +78,10 @@ RecipeList::RecipeList() {
     dinnerHeader = "***Dinner Recipes***";
     dessertHeader = "***Dessert Recipes***";
     separator = "********************"; //change this to change separator in save/load file
+    LoadFile();
 }
 
-void RecipeList::SaveFile() { //receives the created file from menu
+void RecipeList::SaveFile() {
     /**
      * recipeList2D is set up this way:
      * 0 - Breakfast
@@ -122,4 +123,48 @@ void RecipeList::SaveFile() { //receives the created file from menu
         }
     }
     outFile.close(); //close the file
+}
+
+void RecipeList::LoadFile() {
+    char userOption;
+    bool validOption = false;
+    std::cout << "Load from file? (Y/n)" << std::endl;
+
+    while (!validOption) {
+        std::cin >> userOption;
+        userOption = char(std::tolower(userOption)); //convert to lowercase
+        if (userOption == 'y') {
+            validOption = true;
+            std::string fileName, tmpStr; //filename and tmpStr to hold line from file
+            std::cout << "File name:" << std::endl; //print
+            std::cin >> fileName; //ask user for input
+            std::ifstream inFile; //create infile buffer object
+            while (getline(inFile,tmpStr)) { //while reading each line in file
+                if (inFile.eof()) { //if it gets to end of file
+                    break; //break
+                } else {
+                    if (tmpStr == breakfastHeader) { //if the tmpStr line matches the breakfast header
+                        //FIXME do some code
+                    } else if (tmpStr == lunchHeader) { //else if tmpStr line matches the lunch header
+                        //FIXME do some code
+                    } else if (tmpStr == dinnerHeader) { //else if tmpStr line matches the dinner header
+                        //FIXME do some code
+                    } else if (tmpStr == dessertHeader) { //else if tmpStr line matches the dessert header
+                        //FIXME do some code
+                    }
+                }
+            }
+        }
+        else if (userOption == 'n') {
+            validOption = true;
+        }
+        else {
+            std::cout << "Please enter 'y' or 'n':" << std::endl;
+        }
+    }
+
+}
+
+RecipeList::~RecipeList() {
+    SaveFile();
 }

@@ -8,109 +8,111 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug"/>
+				<Option working_dir="/home/osyki/CLionProjects/random-recipe/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="recipes">
-				<Option output="C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/recipes.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 recipes"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="recipes/fast">
-				<Option output="C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/recipes.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 recipes/fast"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug"/>
+				<Option working_dir="/home/osyki/CLionProjects/random-recipe/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug"/>
+				<Option working_dir="/home/osyki/CLionProjects/random-recipe/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Ekyso/CLionProjects/recipes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="recipes">
+				<Option output="/home/osyki/CLionProjects/random-recipe/cmake-build-debug/recipes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/osyki/CLionProjects/random-recipe/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 recipes"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="recipes/fast">
+				<Option output="/home/osyki/CLionProjects/random-recipe/cmake-build-debug/recipes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/osyki/CLionProjects/random-recipe/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 recipes/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/osyki/CLionProjects/random-recipe/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/AddRecipeMenu.h">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/AddRecipeMenu.h">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/DisplayRecipeMenu.h">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/DisplayRecipeMenu.h">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/MainMenu.h">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/MainMenu.h">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/NewRecipes.h">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/NewRecipes.h">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/Recipe.cpp">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/Recipe.cpp">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/Recipe.h">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/Recipe.h">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/RecipeList.cpp">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/RecipeList.cpp">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/RecipeList.h">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/RecipeList.h">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/SaveLoadMenu.h">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/SaveLoadMenu.h">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/main.cpp">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/main.cpp">
 			<Option target="recipes"/>
 		</Unit>
-		<Unit filename="C:/Users/Ekyso/CLionProjects/recipes/CMakeLists.txt">
+		<Unit filename="/home/osyki/CLionProjects/random-recipe/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
