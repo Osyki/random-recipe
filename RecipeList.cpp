@@ -75,11 +75,12 @@ void RecipeList::AddRecipe(Recipe &recipes) {
 RecipeList::RecipeList() {
     recipeList2D.resize(4); //currently set to 4 for breakfast, lunch, dinner, dessert
     breakfastHeader = "***Breakfast Recipes***";
+    breakfastHeader2 << std::setw(50) << std::left << "Breakfast Recipes" << std::endl;
     lunchHeader = "***Lunch Recipes***";
     dinnerHeader = "***Dinner Recipes***";
     dessertHeader = "***Dessert Recipes***";
     separator2 = "********************"; //change this to change separator in save/load file
-    separator << std::setw(30) << std::setfill('*')  << std::left << "\n" << std::endl;
+    separator << std::setw(50) << std::setfill('*')  << std::left << "\n" << std::endl;
     LoadFile();
 }
 

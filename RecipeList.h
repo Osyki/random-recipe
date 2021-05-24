@@ -32,6 +32,7 @@ private:
      */
      std::string breakfastHeader, lunchHeader, dinnerHeader, dessertHeader; //headers for loading/saving
      std::string separator2;
+     std::ostringstream breakfastHeader2; //FIXME not filling asterisks correctly
      std::ostringstream separator;
 
 };
