@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Recipe.h"
 #include <iomanip>
+#include <utility>
 
 Recipe::Recipe() {
     type = {};
@@ -52,4 +53,13 @@ void Recipe::save(std::ostream &out) {
         out << steps.at(i) << std::endl;
     }
     out << "********************" << std::endl;
+}
+
+Recipe::Recipe(std::string name, std::string desc, std::vector<std::string> ingredients,
+               std::vector<std::string> steps) {
+    type = {};
+    nameOfRecipe = std::move(name);
+    description = std::move(desc);
+    this->ingredients = std::move(ingredients);
+    this->steps = std::move(steps);
 }

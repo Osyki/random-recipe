@@ -17,6 +17,7 @@ public:
     void AddRecipe(Recipe &recipes);
     void SaveFile();
     void LoadFile();
+    void CreateRecipeFromLoad(std::istream &in, Recipe::recipeType type);
     std::string GetBreakfastHeader() {return breakfastHeader;};
     std::string GetLunchHeader() {return lunchHeader;};
     std::string GetDinnerHeader() {return dinnerHeader;};

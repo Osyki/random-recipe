@@ -84,25 +84,29 @@ RecipeList::RecipeList() {
     LoadFile();
 }
 
+/**
+    * recipeList2D is set up this way:
+    * 0 - Breakfast
+    * 1 - Lunch
+    * 2 - Dinner
+    * 3 - Dessert
+    */
 void RecipeList::SaveFile() {
-    /**
-     * recipeList2D is set up this way:
-     * 0 - Breakfast
-     * 1 - Lunch
-     * 2 - Dinner
-     * 3 - Dessert
-     */
     std::string fileName; //create fileName string
     std::ofstream outFile;// create buffer to be saved
 
     std::cout << "File name:" << std::endl; //print file name:
     std::cin >> fileName; //ask user for file name
+
+    //checks to see if .txt is added by user, if not found add it
     if ((fileName.length() > 4) && (fileName.substr(fileName.size()-4,fileName.size()-1)) != ".txt") {
         fileName += ".txt";
     }
     else if (fileName.length() < 4 ){
         fileName += ".txt";
     }
+
+    //create file
     outFile.open(fileName); //create file and append .txt to end
     for (int i = 0; i < recipeList2D.size(); i++) { //for every option in recipe list
         switch (i) { //change headers in constructor
@@ -142,18 +146,29 @@ void RecipeList::LoadFile() {
             std::cout << "File name:" << std::endl; //print
             std::cin >> fileName; //ask user for input
             std::ifstream inFile; //create infile buffer object
+            inFile.open(fileName); //open filename given, must be exact match TODO: check .txt
             while (getline(inFile,tmpStr)) { //while reading each line in file
                 if (inFile.eof()) { //if it gets to end of file
                     break; //break
                 } else {
                     if (tmpStr == breakfastHeader) { //if the tmpStr line matches the breakfast header
                         //FIXME do some code
+                        while (tmpStr != lunchHeader) {
+                            CreateRecipeFromLoad(inFile,Recipe::recipeType::breakfast);
+                        } //FIXME: not exiting loop when finding next header
                     } else if (tmpStr == lunchHeader) { //else if tmpStr line matches the lunch header
                         //FIXME do some code
+                        while (tmpStr != dinnerHeader) {
+                            CreateRecipeFromLoad(inFile,Recipe::recipeType::lunch);
+                        }
                     } else if (tmpStr == dinnerHeader) { //else if tmpStr line matches the dinner header
                         //FIXME do some code
+                        while (tmpStr != dessertHeader) {
+                            CreateRecipeFromLoad(inFile,Recipe::recipeType::dinner);
+                        }
                     } else if (tmpStr == dessertHeader) { //else if tmpStr line matches the dessert header
                         //FIXME do some code
+                        CreateRecipeFromLoad(inFile,Recipe::recipeType::dessert);
                     }
                 }
             }
@@ -170,4 +185,33 @@ void RecipeList::LoadFile() {
 
 RecipeList::~RecipeList() {
     SaveFile();
+}
+
+void RecipeList::CreateRecipeFromLoad(std::istream &in, Recipe::recipeType type) {
+    std::string tmpStr, name, description;
+    std::vector<std::string> ingredients, steps;
+    in >> tmpStr;
+    std::getline(in,name);
+    in >> tmpStr;
+    std::getline(in,description);
+    in >> tmpStr;
+    while (std::getline(in,tmpStr)) {
+        if (tmpStr == "Steps:" || in.eof()) {
+            break;
+        }
+        if (!tmpStr.empty()) {
+            ingredients.push_back(tmpStr);
+        }
+
+    }
+    while (std::getline(in,tmpStr)) {
+        if (tmpStr == separator2 || in.eof()) {
+            break;
+        }
+        if (!tmpStr.empty()) {
+            steps.push_back(tmpStr);
+        }
+    }
+    Recipe createdRecipe(type,name,description,ingredients,steps);
+    AddRecipe(createdRecipe);
 }
