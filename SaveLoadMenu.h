@@ -30,6 +30,7 @@ void LoadFromFile(RecipeList *list) {
         else {
             if (tmpStr == list->GetBreakfastHeader()) { //if the tmpStr line matches the breakfast header
                 //FIXME do some code
+
             }
             else if (tmpStr == list->GetLunchHeader()) { //else if tmpStr line matches the lunch header
                 //FIXME do some code

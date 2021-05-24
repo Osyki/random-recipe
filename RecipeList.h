@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include "Recipe.h"
+#include <sstream>
 
 class RecipeList {
 public:
@@ -30,7 +31,10 @@ private:
      * 3 - Dessert
      */
      std::string breakfastHeader, lunchHeader, dinnerHeader, dessertHeader; //headers for loading/saving
-     std::string separator;
+     std::string separator2;
+     std::ostringstream breakfastHeader2; //FIXME not filling asterisks correctly
+     std::ostringstream separator;
+
 };
 
 

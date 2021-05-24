@@ -5,28 +5,29 @@
 #include <iostream>
 #include "RecipeList.h"
 #include <fstream>
+#include <iomanip>
 
 //RecipeList::RecipeList(const Recipe recipes) {
 //    recipeList.push_back(recipes);
 //}
 
 void RecipeList::PrintRecipes(const char option) {
-    std::cout << std::endl << separator << std::endl;
     if (option == '1') {
-        for (auto & i : recipeList2D) { //cycle through vector that holds the categorized lists
-            for (auto & j : i) { //for every recipe in list
-                std::cout << std::endl; //newline
+        for (auto & i : recipeList2D) { //cycle through vector that holds the individual recipe vectors
+            for (auto & j : i) { //for every recipe in recipe vector
+                std::cout << separator.str();
+                std::cout << std::endl;
                 j.PrintRecipe(); //print recipe
-                std::cout << std::endl << separator << std::endl; //used to separate
             }
         }
+        std::cout << separator.str();
     }
 
     if (option == '3') {
         for (auto & i : recipeList2D.at(0)) { //for every recipe in list // 0 = breakfast
             std::cout << std::endl;
             i.PrintRecipe(); //print recipe
-            std::cout << std::endl << separator << std::endl;
+            std::cout << std::endl << separator.str() << std::endl;
         }
     }
 
@@ -34,7 +35,7 @@ void RecipeList::PrintRecipes(const char option) {
         for (auto & i : recipeList2D.at(1)) { //1 = lunch
             std::cout << std::endl;
             i.PrintRecipe();
-            std::cout << std::endl << separator << std::endl;
+            std::cout << std::endl << separator.str() << std::endl;
         }
     }
 
@@ -42,7 +43,7 @@ void RecipeList::PrintRecipes(const char option) {
         for (auto & i : recipeList2D.at(2)) { // 2 = dinner
             std::cout << std::endl;
             i.PrintRecipe();
-            std::cout << std::endl << separator << std::endl;
+            std::cout << std::endl << separator.str() << std::endl;
         }
     }
 
@@ -50,7 +51,7 @@ void RecipeList::PrintRecipes(const char option) {
         for (auto & i : recipeList2D.at(3)) { // 3 = dessert
             std::cout << std::endl;
             i.PrintRecipe();
-            std::cout << std::endl << separator << std::endl;
+            std::cout << std::endl << separator.str() << std::endl;
         }
     }
 
@@ -74,10 +75,12 @@ void RecipeList::AddRecipe(Recipe &recipes) {
 RecipeList::RecipeList() {
     recipeList2D.resize(4); //currently set to 4 for breakfast, lunch, dinner, dessert
     breakfastHeader = "***Breakfast Recipes***";
+    breakfastHeader2 << std::setw(50) << std::left << "Breakfast Recipes" << std::endl;
     lunchHeader = "***Lunch Recipes***";
     dinnerHeader = "***Dinner Recipes***";
     dessertHeader = "***Dessert Recipes***";
-    separator = "********************"; //change this to change separator in save/load file
+    separator2 = "********************"; //change this to change separator in save/load file
+    separator << std::setw(50) << std::setfill('*')  << std::left << "\n" << std::endl;
     LoadFile();
 }
 
@@ -135,7 +138,7 @@ void RecipeList::LoadFile() {
         userOption = char(std::tolower(userOption)); //convert to lowercase
         if (userOption == 'y') {
             validOption = true;
-            std::string fileName, tmpStr; //filename and tmpStr to hold line from file
+            std::string fileName, tmpStr; //filename and tmpStr to hold lines from file
             std::cout << "File name:" << std::endl; //print
             std::cin >> fileName; //ask user for input
             std::ifstream inFile; //create infile buffer object
