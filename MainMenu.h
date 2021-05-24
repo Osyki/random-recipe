@@ -19,8 +19,8 @@ void MainMenu(RecipeList *list) { //Displays the main menu
     std::cout << "1 - Add a recipe" << std::endl;
     std::cout << "2 - Display a recipe" << std::endl;
     std::cout << "3 - Delete a recipe" << std::endl;
-    std::cout << "4 - Load from file" << std::endl;
-    std::cout << "5 - Save to file" << std::endl;
+    //std::cout << "4 - Load from file" << std::endl;
+    //std::cout << "5 - Save to file" << std::endl;
     std::cout << "q - Quit" << std::endl;
     std::cout << std::endl;
     std::cout << "Choose an option:" << std::endl;
