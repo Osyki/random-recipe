@@ -218,7 +218,7 @@ void RecipeList::CreateRecipeFromLoad(std::istream &in, Recipe::recipeType type)
             if (!tmpStr.empty()) {
                 steps.push_back(tmpStr);
             }
-            else if (in.peek() == separatingChar) {
+            if (in.peek() == separatingChar) {
                 std::getline(in,tmpStr);
                 break;
             }
