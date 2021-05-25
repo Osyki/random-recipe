@@ -29,10 +29,16 @@ void NewRecipe(RecipeList *list, Recipe::recipeType type) {
     }
 
     std::cout << "Enter the steps, type -1 when finished" << std::endl;
-    getline(std::cin,tmpStr);
-    while (tmpStr != "-1") {
-        steps.push_back(tmpStr);
-        getline(std::cin,tmpStr);
+    int count = 1;
+    while (getline(std::cin,tmpStr)) {
+        std::ostringstream oss;
+        if (tmpStr == "-1")
+            break;
+        oss << count << ".) " << tmpStr;
+        std::string tempString = oss.str();
+        std::cout << tempString << std::endl;
+        steps.push_back(oss.str());
+        count++;
     }
 
     Recipe tmpRecipe(type,name,desc,ingredients,steps); //Create recipe object

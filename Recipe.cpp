@@ -44,26 +44,17 @@ void Recipe::save(std::ostream &out) {
     std::string name, desc;
     name = "Name: " + nameOfRecipe;
     desc = "Description: " + description;
-    if (name.size() > 49)
-        out << std::setw(50);
     out << name << std::endl;
-    if (desc.size() > 49)
-        out << std::setw(50);
     out << desc << std::endl << std::endl;
     out << "Ingredients:" << std::endl;
     for (i = 0; i < ingredients.size(); i++ ) {
-        if (ingredients.at(i).size() > 49)
-            out << std::setw(50);
         out  << ingredients.at(i) << std::endl;
     }
     out << std::endl;
     out << "Steps:" << std::endl;
     for (i = 0; i < steps.size(); i++) {
-        if (steps.at(i).size() > 49)
-            out << std::setw(50);
         out << steps.at(i) << std::endl;
     }
-    out.unsetf(std::ios::left);
 }
 
 Recipe::Recipe(std::string name, std::string desc, std::vector<std::string> ingredients,
