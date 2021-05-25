@@ -5,7 +5,7 @@
 #include <iostream>
 #include "RecipeList.h"
 #include <fstream>
-#include <iomanip>
+#include "CenterMiddleHelperClass.h"
 
 //RecipeList::RecipeList(const Recipe recipes) {
 //    recipeList.push_back(recipes);
@@ -74,13 +74,17 @@ void RecipeList::AddRecipe(Recipe &recipes) {
 
 RecipeList::RecipeList() {
     recipeList2D.resize(4); //currently set to 4 for breakfast, lunch, dinner, dessert
-    breakfastHeader = "***Breakfast Recipes***";
-    breakfastHeader2 << std::setw(50) << std::left << "Breakfast Recipes" << std::endl;
-    lunchHeader = "***Lunch Recipes***";
-    dinnerHeader = "***Dinner Recipes***";
-    dessertHeader = "***Dessert Recipes***";
+    separatingChar = '-';
+    breakfastHeader = "Breakfast Recipes";
+    breakfastHeader2 << std::setw(50) << std::setfill(separatingChar) << centered(breakfastHeader);
+    lunchHeader = "Lunch Recipes";
+    lunchHeader2 << std::setw(50) << std::setfill(separatingChar) << centered(lunchHeader);
+    dinnerHeader = "Dinner Recipes";
+    dinnerHeader2 << std::setw(50) << std::setfill(separatingChar) << centered(breakfastHeader);
+    dessertHeader = "Dessert Recipes";
+    dessertHeader2 << std::setw(50) << std::setfill(separatingChar) << centered(breakfastHeader);
     separator2 = "********************"; //change this to change separator in save/load file
-    separator << std::setw(50) << std::setfill('*')  << std::left << "\n" << std::endl;
+    separator << std::setw(50) << std::setfill(separatingChar)  << "";
     LoadFile();
 }
 
@@ -111,22 +115,29 @@ void RecipeList::SaveFile() {
     for (int i = 0; i < recipeList2D.size(); i++) { //for every option in recipe list
         switch (i) { //change headers in constructor
             case 0: //first vector in 2d vector is breakfast
-                outFile << breakfastHeader << std::endl; //save header to file
+                outFile << separator.str() << std::endl;
+                outFile << breakfastHeader2.str() << std::endl; //save header to file
+                outFile << separator.str() << std::endl;
                 break; //break after writing header to file
             case 1:
-                outFile << lunchHeader << std::endl;
+                outFile << lunchHeader2.str() << std::endl;
+                outFile << separator.str() << std::endl;
                 break;
             case 2:
-                outFile << dinnerHeader << std::endl;
+                outFile << dinnerHeader2.str() << std::endl;
+                outFile << separator.str() << std::endl;
                 break;
             case 3:
-                outFile << dessertHeader << std::endl;
+                outFile << dessertHeader2.str() << std::endl;
+                outFile << separator.str() << std::endl;
             default:
                 break;
         }
+
         for (auto & j : recipeList2D.at(i)) { //for every recipe in vector[i]
             //FIXME: need to create a function that returns an object and writes to the outfile, move from recipe to recipeList
             j.save(outFile); //send outFile to save function inside recipe
+            outFile << separator.str() << std::endl;
         }
     }
     outFile.close(); //close the file
@@ -148,29 +159,23 @@ void RecipeList::LoadFile() {
             std::ifstream inFile; //create infile buffer object
             inFile.open(fileName); //open filename given, must be exact match TODO: check .txt
             while (getline(inFile,tmpStr)) { //while reading each line in file
-                if (inFile.eof()) { //if it gets to end of file
-                    break; //break
-                } else {
-                    if (tmpStr == breakfastHeader) { //if the tmpStr line matches the breakfast header
+                    if (tmpStr == breakfastHeader2.str()) { //if the tmpStr line matches the breakfast header
                         //FIXME do some code
-                        while (tmpStr != lunchHeader) {
                             CreateRecipeFromLoad(inFile,Recipe::recipeType::breakfast);
-                        } //FIXME: not exiting loop when finding next header
-                    } else if (tmpStr == lunchHeader) { //else if tmpStr line matches the lunch header
+                    } else if (tmpStr == lunchHeader2.str()) { //else if tmpStr line matches the lunch header
                         //FIXME do some code
-                        while (tmpStr != dinnerHeader) {
                             CreateRecipeFromLoad(inFile,Recipe::recipeType::lunch);
-                        }
-                    } else if (tmpStr == dinnerHeader) { //else if tmpStr line matches the dinner header
+
+                    } else if (tmpStr == dinnerHeader2.str()) { //else if tmpStr line matches the dinner header
                         //FIXME do some code
-                        while (tmpStr != dessertHeader) {
                             CreateRecipeFromLoad(inFile,Recipe::recipeType::dinner);
-                        }
-                    } else if (tmpStr == dessertHeader) { //else if tmpStr line matches the dessert header
+
+                    } else if (tmpStr == dessertHeader2.str()) { //else if tmpStr line matches the dessert header
                         //FIXME do some code
                         CreateRecipeFromLoad(inFile,Recipe::recipeType::dessert);
                     }
-                }
+                if (inFile.peek() == EOF) //if next char is EOF
+                    break; //break
             }
         }
         else if (userOption == 'n') {
@@ -188,30 +193,35 @@ RecipeList::~RecipeList() {
 }
 
 void RecipeList::CreateRecipeFromLoad(std::istream &in, Recipe::recipeType type) {
-    std::string tmpStr, name, description;
-    std::vector<std::string> ingredients, steps;
-    in >> tmpStr;
-    std::getline(in,name);
-    in >> tmpStr;
-    std::getline(in,description);
-    in >> tmpStr;
-    while (std::getline(in,tmpStr)) {
-        if (tmpStr == "Steps:" || in.eof()) {
-            break;
-        }
-        if (!tmpStr.empty()) {
-            ingredients.push_back(tmpStr);
-        }
+    std::string tmpStr;
+    std::getline(in,tmpStr);
+    while (in.peek() != separatingChar) {
+        std::string name, description;
+        std::vector<std::string> ingredients, steps;
+        in >> tmpStr; //erase "Name:"
+        std::getline(in,name);
+        in >> tmpStr; //erase "Description: "
+        std::getline(in,description);
+        in >> tmpStr; //erase "Ingredients:"
+        while (std::getline(in,tmpStr)) {
+            if (tmpStr == "Steps:" || in.eof()) {
+                break;
+            }
+            if (!tmpStr.empty()) {
+                ingredients.push_back(tmpStr);
+            }
 
-    }
-    while (std::getline(in,tmpStr)) {
-        if (tmpStr == separator2 || in.eof()) {
-            break;
         }
-        if (!tmpStr.empty()) {
-            steps.push_back(tmpStr);
+        while (std::getline(in,tmpStr)) {
+            if (!tmpStr.empty()) {
+                steps.push_back(tmpStr);
+            }
+            if (in.peek() == separatingChar) {
+                std::getline(in,tmpStr);
+                break;
+            }
         }
+        Recipe createdRecipe(type,name,description,ingredients,steps);
+        AddRecipe(createdRecipe);
     }
-    Recipe createdRecipe(type,name,description,ingredients,steps);
-    AddRecipe(createdRecipe);
 }

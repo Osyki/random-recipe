@@ -53,9 +53,9 @@ void UserOptionMain(RecipeList *list, char option) { //function to call appropri
                 MainMenu(list);
                 break;
 
-            case '4': //load to file FIXME do next
+            case '4': //load from file //TODO: NO LONGER NEEDED, AUTOMATIC LOADING WHEN RUNNING PROGRAM
                 validOption = true;
-                LoadFromFile(list); //FIXME: change to call load method
+                LoadFromFile(list); //
                 //std::cout << "This is option 4" << std::endl; //TODO: testing option only
                 MainMenu(list);
                 break;
