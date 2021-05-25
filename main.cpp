@@ -5,7 +5,6 @@
 
 int main() {
     RecipeList list1;
-    std::cout << "Welcome to your recipe log!" << std::endl;
     MainMenu(&list1); //call printmenu
 
     /***
